@@ -1,0 +1,147 @@
+{
+    "format_version": 2,        //1 o 2 (Necesario)
+    // 1 = Paquetes de skins
+    // 2 = Paquetes de recursos/Paquetes de comportamientos/Plantillas de mundos
+    
+    "header": {
+    //Informacion basica de el Pack (Necesario)
+
+        "name": "Paquete de comportamientos de prueba.",    //"String" (Necesario)
+        //Nombre de tu pack de comportamientos
+
+        "description": "Ejemplo\nLinea 2:",     //"String" (Opcional)
+        //Descripcion que aparecera debajo de el nombre
+        //Despues de 3 lineas tienes que presionar el boton "Más información" dentro de el juego para poder verla
+        //Puedes hacer cambio de linea con "\n"
+
+        "version": "1.2.1-PreAlpha",    //[x,x,x] o "String" (Necesario)
+        //La version de tu paquete de comportamientos
+
+        "uuid": "91d91360-dcbc-4487-af1e-29c90461bccb",     //"String" (Necesario)
+        //Identificador unico de el pack, puedes generarlos en https://www.uuidgenerator.net/version4
+
+        "min_engine_version": [1,21,0],     //[x,x,x] (Necesario)
+        //Version minima de el juego para el cual esta hecho el pack
+        //Debajo de esta version de minecraft el pack no aparecera en las listas de almacenamiento
+
+        "base_game_version": [1,21,0],      //[x,x,x] (Solo para Plantillas de mundos)
+        //Version base de el juego para cual esta hecho el pack
+
+        "lock_template_options": true,      //Boolean (Solo para Plantillas de mundos)
+        //true = No permite al jugador modificar las opciones del mundo
+
+        "allow_random_seed": true,      //Boolean (Solo para Plantillas de mundos)
+        //true = No permite al jugador modificar la semilla antes de crear un mundo
+
+        "pack_scope":"any"     //"world" o "global" o "any" (Solo para Paquetes de recursos)
+        //Especifica en que circunstancia puede aplicarse el pack
+        //"world" = Solo se puede agregar en mundos
+        //"global" = Solo se puede agregar en el cliente
+        //"any" = Se puede agregar en cualquiera de los 2
+        //Si no se especifica el "pack_scope" se interpreta como "any"
+    },
+
+    "modules": [
+    //Informacion sobre el tipo de contenido que incorpora (Necesario)
+    //Puedes dejarlo vacio, pero por lo menos debe existir "modules": []
+
+        {
+            "type": "data",     //"resources" o "data" o "world_template" o "script" o "skin_pack" (Necesario)
+            //Especifica el tipo de modulo
+
+            "description": "Ejemplo",       //"String" (Opcional)
+            //Descripcion de el modulo
+
+            "version": [1,0,0],    //[x,x,x] o "String" (Necesario)
+            //La version de tu modulo
+
+            "uuid": "ee4465ea-87ca-403c-bfaf-b4d7e0f93862",     //"String" (Necesario)
+            //Identificador unico de tu modulo, puedes generarlos en https://www.uuidgenerator.net/version4
+
+            "language": "javascript",       //"javascript" (Necesario solo si "type": "script")
+            //Indica el lenguaje de programacion en el que estan escritos los scripts
+            //Solo soporta "javascript"
+
+            "entry": "scripts/main.js"      //"path" (Necesario solo si "type": "script")
+            //Indica la ruta de el archivo principal de tu script dentro del pack
+        },
+        {       //Ejemplos
+            "type": "script",
+            "description": "Script de mi servidor",
+            "version": "Beta-1.04.10",
+            "uuid": "26f65de4-6715-41d4-9994-934689f25868",
+            "language": "javascript",
+            "entry": "scripts/main.js"
+        },
+        {
+            "type": "data",
+            "description": "Ejemplo",
+            "version": [1,0,0]
+        }
+    ],
+
+    "subpacks":[
+    //Permite a los jugadores elegir entre diferentes opciones o variaciones de tu pack (Opcional)(Solo para Paquetes de recursos)
+
+        {
+            "folder_name": "LowResources",      //"path" (Necesario)
+            //Nombre de el folder donde se encuentran tus recursos
+
+            "name": "Calidad grafica baja",       //"String" (Necesario)
+            //Nombre que ven los jugadores mientras eligen el subpack
+            //Puedes hacer cambio de linea con "\n"
+            //Puedes poner un identificador y traducirlo desde un .lang, pero el texto solo sera traducido una vez que hayan aplicado el pack correctamente primero.
+
+            "memory_tier": 0        //Number:0 (Necesario)
+            //Establece la cantidad de RAM necesaria para utilizar el subpack
+            //Cada numero represente +0.25GB de RAM
+            //4 = 1GB RAM; 32 = 8GB RAM; 128 = 32GB RAM; etc
+            //Puedes usar cualquier numero dependiendo de que tanto necesite tu subpack
+            //Si el jugador no cumple con los requisitos de memoria RAM se avisara automaticamente dentro de las opciones de subpacks
+        },
+        {       //Ejemplos
+            "folder_name": "MidResources",
+            "name": "Calidad grafica media",
+            "memory_tier": 16 //4GB RAM
+        },
+        {
+            "folder_name": "HighResources",
+            "name": "Calidad grafica alta",
+            "memory_tier": 64 //16GB RAM
+        }
+    ],
+    
+    "settings":[
+    //Una descripcion sobre lo que incluyen tus subpacks (Opcional)
+        {
+            "type": "label",        //"label" (Necesario)
+            //Permite agregar la descripcion de tu pack o subpack
+            //Solo soporta "label"
+
+            "text": "Texto de prueba"       //"String" (Necesario)
+            //Texto que aparece debajo de la eleccion de subpacks
+            //Puedes hacer cambio de linea con "\n"
+            //Puedes poner un identificador y traducirlo desde un .lang, pero el texto solo sera traducido una vez que hayan aplicado el pack correctamente primero.
+        }       //Agregar mas objetos tipo "label" hara un cambio de linea como \n
+    ],
+
+    "dependencies":[
+    //Define cualquier otro pack o recurso que necesita para trabajar
+
+        {
+            "uuid": "0b727cf6-b636-4c55-ad67-f19abae4f2d3",     //"String" (Necesario)
+            //Identificador unico de el pack de el que depende
+            //Tiene que ser exactamente el mismo que el "uuid" definido en el "header":[] de tu otro pack
+
+            "version": [1,0,0],     ////[x,x,x] o "String" (Necesario)
+            //La version de el pack de el que depende o de el modulo a importar
+            //Tiene que ser exactamente la misma que en el "manifest.json" de tu otro pack (En el primer caso)
+            //Tiene que ser una version valida de el modulo a importar (En el segundo caso)
+
+            "module_name": "@minecraft/server"      //"String" (Necesario solo si hay un modulo tipo "script")
+            //Nombre de el modulo que se quiere importar
+            //Los mas comunes son; "@minecraft/server" y "@minecraft/server-ui"
+            //Puedes checar las versiones disponibles en: https://www.npmjs.com/package/@minecraft/server y https://www.npmjs.com/package/@minecraft/server-ui
+        }
+    ]
+}
