@@ -1,0 +1,6 @@
+{
+    "values": [ // Agrega en este array los nombres de tus archivos (No hace falta que pongas ".mcfunction").
+        "onFirstJoin",
+        "testFolder/testFunction2"
+    ]
+}
