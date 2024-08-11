@@ -15,6 +15,7 @@
         //Puedes hacer cambio de linea con "\n"
 
         "version": "1.2.1-PreAlpha",    //[x,x,x] o "String" (Necesario)
+        //En caso de poner un "String" debe iniciar con numero; ejemplo: "1.0.0-Released"
         //La version de tu paquete de comportamientos
 
         "uuid": "91d91360-dcbc-4487-af1e-29c90461bccb",     //"String" (Necesario)
@@ -43,7 +44,7 @@
 
     "modules": [
     //Informacion sobre el tipo de contenido que incorpora (Necesario)
-    //Puedes dejarlo vacio, pero por lo menos debe existir "modules": []
+    //Necesita almenos el ejemplo de tipo data que aparece hasta abajo.
 
         {
             "type": "data",     //"resources" o "data" o "world_template" o "script" o "skin_pack" (Necesario)
@@ -52,7 +53,7 @@
             "description": "Ejemplo",       //"String" (Opcional)
             //Descripcion de el modulo
 
-            "version": [1,0,0],    //[x,x,x] o "String" (Necesario)
+            "version": [1,0,0],    //[x,x,x] (Necesario)
             //La version de tu modulo
 
             "uuid": "ee4465ea-87ca-403c-bfaf-b4d7e0f93862",     //"String" (Necesario)
@@ -75,13 +76,13 @@
         },
         {
             "type": "data",
-            "description": "Ejemplo",
+            "uuid": "12599a39-fc90-4832-acc6-4d3c5920bd6d",
             "version": [1,0,0]
         }
     ],
 
     "subpacks":[
-    //Permite a los jugadores elegir entre diferentes opciones o variaciones de tu pack (Opcional)(Solo para Paquetes de recursos)
+    //Permite a los jugadores elegir entre diferentes opciones o variaciones de tu pack (Opcional)
 
         {
             "folder_name": "LowResources",      //"path" (Necesario)
@@ -134,6 +135,7 @@
             //Tiene que ser exactamente el mismo que el "uuid" definido en el "header":[] de tu otro pack
 
             "version": [1,0,0],     ////[x,x,x] o "String" (Necesario)
+            //En caso de poner un "String" debe iniciar con numero; ejemplo: "1.0.0-Released"
             //La version de el pack de el que depende o de el modulo a importar
             //Tiene que ser exactamente la misma que en el "manifest.json" de tu otro pack (En el primer caso)
             //Tiene que ser una version valida de el modulo a importar (En el segundo caso)
