@@ -3,10 +3,10 @@
 
 - [format_version](#format-version) (Necesario)
 - [header]() (Necesario)
-- [modules]()
-- [subpacks]()
-- [settings]()
-- [dependencies]()
+- [modules]() (Necesario)
+- [subpacks]() (Opcional)
+- [settings]() (Opcional)
+- [dependencies]() (Opcional)
 
 ## Format Version
 ```json
@@ -22,4 +22,8 @@
 > Nota:
 >
 > En caso de que Mojang decida añadir algo mas a la sintaxis de el manifest en un futuro, crearan una nueva version.<br>
-> Si eso sucede este sitio será actualizado.
+> Si eso sucede este sitio sera actualizado.
+
+## Header
+
+## Modules
