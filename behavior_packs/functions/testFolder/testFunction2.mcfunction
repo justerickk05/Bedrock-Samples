@@ -1,5 +1,5 @@
 # Funciones dentro de carpetas pueden ser llamadas dentro de el juego con el comando /function "nombre de la carpeta"/"nombre de el archivo"
-# En este caso /function testCarpet/testFunction2
+# En este caso /function testFolder/testFunction2
 
 scoreboard players set onlinePlayers total 0
 execute as @e [type=player] run scoreboard players add onlinePlayers total 1
