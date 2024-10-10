@@ -1,3 +1,3 @@
 ---
-Tipo de archivo: [json](https://es.wikipedia.org/wiki/JSON)
+Tipo: json
 ---
