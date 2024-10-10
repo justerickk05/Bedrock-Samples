@@ -1,3 +1,3 @@
 ---
-Tipo: json
+"Tipo de Archivo": json
 ---
