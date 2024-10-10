@@ -23,4 +23,4 @@
 > Nota:
 >
 > En caso de que Mojang decida añadir algo mas a la sintaxis de el manifest en un futuro, crearan una nueva version.<br>
->Si eso sucede
+> Si eso sucede este sitio será actualizado.
