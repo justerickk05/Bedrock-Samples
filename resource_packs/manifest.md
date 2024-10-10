@@ -1,6 +1,5 @@
 # Manifest (Resource Packs)
-> [resource_pack](../resource_packs/)/manifest.[json](https://wiki.bedrock.dev/guide/understanding-json.html) <br>
->[Descargar](../behavior_packs/manifest.json "download")
+> [resource_pack](../resource_packs/)/[manifest](../behavior_packs/manifest.json).[json](https://wiki.bedrock.dev/guide/understanding-json.html)
 
 - [format_version](#format-version) (Necesario)
 - [header]() (Necesario)
